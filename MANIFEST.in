@@ -1,0 +1,5 @@
+include LICENSE
+include README.rst
+recursive-include materialize/static *
+recursive-include materialize/templates *
+recursive-include materialize *.html *.png *.gif *js *jpg *jpeg *svg *py

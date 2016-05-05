@@ -1,0 +1,7 @@
+<br>
+{% for id, i in field.field.widget.choices %}
+    <p>
+        <input name="{{ field.name }}" type="radio" id="id_{{ field.name }}_{{ forloop.counter0 }}" value="{{ id }}" name="{{ field.name }}" />
+        <label for="id_{{ field.name }}_{{ forloop.counter0 }}">{{ i }}</label>
+    </p>
+{% endfor %}
