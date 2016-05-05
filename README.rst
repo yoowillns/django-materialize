@@ -40,7 +40,7 @@ Quick start download ZIP or clone this repository
 	<!-- Compiled and minified JavaScript -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 
-	Or download files " materializecss " http://materializecss.com/bin/materialize-v0.97.6.zip and copy in the ``static`` path of your project and load your templates
+Or download files " materializecss " http://materializecss.com/bin/materialize-v0.97.6.zip and copy in the ``static`` path of your project and load your templates
 
 4. In your templates, load the ``materialize`` library and use the ``{% load materialize %}`` 
 
