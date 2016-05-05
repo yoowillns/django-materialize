@@ -19,29 +19,3 @@ def render_form(form, form_title='', data_success='', data_error=''):
      }
     html = t.render(c)
     return html
-
-
-
-@register.simple_tag()
-def materialize_table(*args, **kwargs):
-    return render_table(*args, **kwargs)
-
-
-def render_table(model, instance, table_title=''):
-    objects = model
-    fields = []
-
-    for field in instance._meta.fields:
-        fields.append({'id': field.name, 'name': field.verbose_name.title()})
-
-    for object in model:
-        object.fields = dict((field.name, field.value_to_string(object))
-                                            for field in object._meta.fields)
-    t = loader.get_template('tables/simple_table.html')
-    c = {
-        'model': model,
-        'objects':objects,
-        'fields':fields,
-     }
-    html = t.render(c)
-    return html

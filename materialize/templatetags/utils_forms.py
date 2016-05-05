@@ -15,7 +15,7 @@ def field_type(field):
 
 @register.filter(name='field_type')
 def field_type(field):
-    return field.field.widget.__class__.__name__
+    return get_field_type(field)
 
 def get_field_type(field):
     return field.field.widget.__class__.__name__

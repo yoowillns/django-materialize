@@ -11,7 +11,7 @@ http://materializecss.com/
 Requirements
 ------------
 
-- Python 2.7, 3.2, 3.3, 3.4, or 3.5
+- Python >= 2.7
 - Django >= 1.8
 
 Quick start download ZIP or clone this repository 
@@ -42,7 +42,7 @@ Example template base.html
 	<!-- Compiled and minified JavaScript -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 
-Or download files " materializecss " http://materializecss.com/bin/materialize-v0.97.6.zip and copy in the ` ` static`` of your project and load your templates
+Or download files " materializecss " http://materializecss.com/bin/materialize-v0.97.6.zip and copy in the `` static`` of your project and load your templates
 
 4. In your templates, load the ``materialize`` library and use the ``{% load materialize %}`` 
 
