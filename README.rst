@@ -14,10 +14,9 @@ Requirements
 - Python 2.7, 3.2, 3.3, 3.4, or 3.5
 - Django >= 1.8
 
-Quick start
+Quick start download ZIP or clone this repository 
 -----------
 1. Install:
-	Download ZIP or clone this repository 
 
    ``setup.py install``
 
@@ -32,7 +31,7 @@ Quick start
 	
 Example template base.html
 ----------------
-	.. code:: html
+	.. code:: Django
 
 	<!-- Compiled and minified CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
