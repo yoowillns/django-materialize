@@ -31,7 +31,7 @@ Quick start download ZIP or clone this repository
 3. Add "materializecss" in base template in django::
 	
 	Example template base.html
-```html
+
 	<!-- Compiled and minified CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 
@@ -40,7 +40,7 @@ Quick start download ZIP or clone this repository
 
 	<!-- Compiled and minified JavaScript -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-```
+
 
 	Or download files " materializecss " http://materializecss.com/bin/materialize-v0.97.6.zip and copy in the ``static`` path of your project and load your templates
 
