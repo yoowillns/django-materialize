@@ -1,9 +1,13 @@
 <div class="file-field input-field">
   <div class="btn">
     <span>{{ field.label }}</span>
-    <input type="file">
+      <input type="file" name="{{ field.name }}" id="id_{{ field.name }}">
   </div>
   <div class="file-path-wrapper">
-    <input class="file-path validate" type="text">
+      {% if field.value %}
+          <input class="file-path validate" type="text" value="{{ field.value }}">
+      {% else %}
+          <input class="file-path validate" type="text">
+      {% endif %}
   </div>
 </div>
