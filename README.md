@@ -26,7 +26,7 @@ Requirements
   - [2.2: Model Form Example](#model-form-example)
   - [2.3: Template Form Example](#template-form-example)
 - [Part 3: Extra](#extra)
-  - [3.1: Customize Label Erros](#customize-label-errors)
+  - [3.1: Customize Label Erros](#customize-label-erros)
 
 ---
 
@@ -42,7 +42,7 @@ Our stack usually consists of the following tools:
 
    ``setup.py install``
 
-2. Add "materialize" to your INSTALLED_APPS setting :
+2. Add "materialize" to your INSTALLED_APPS settings :
     ```python
     INSTALLED_APPS = [
         ...
@@ -79,6 +79,8 @@ Our stack usually consists of the following tools:
 ### Template Content
 
 ```python
+
+{% extends 'layouts/MainLayout.html' %}
 
 {% load materialize %}
 
@@ -139,6 +141,8 @@ class ProductForm(forms.ModelForm):
 ### Template Form Example
 
 ```python
+
+{% extends 'layouts/MainLayout.html' %}
 
 {% load materialize %}
 
