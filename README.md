@@ -56,7 +56,7 @@ Download ZIP or clone this repository (https://github.com/yoowillns/django-mater
 
 ### Template Main Layout
 
-```python
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -163,7 +163,7 @@ class ProductForm(forms.ModelForm):
 
 ### Result Form
 
-![alt text](screenshots/demo-1.png "Demo Form")
+![alt text](https://github.com/yoowillns/screenshots/blob/master/demos/materialize-form-1.png "Demo Form")
 
 ## Extra
 ### Customize Label Erros
