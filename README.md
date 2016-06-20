@@ -138,7 +138,6 @@ Our stack usually consists of the following tools:
 
 
 ### Template Form Example
-  .. code:: Django
 
     {% load materialize %}
 
