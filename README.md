@@ -26,7 +26,7 @@ Requirements
   - [2.2: Model Form Example](#model-form-example)
   - [2.3: Template Form Example](#template-form-example)
 - [Part 3: Extra](#extra)
-    - [3.1.1: Customize label erros](#customize-label-errors)
+  - [3.1.1: Customize label erros](#customize-label-errors)
 
 ---
 
@@ -160,3 +160,6 @@ Our stack usually consists of the following tools:
 ## Extra
 ### Customize label erros
 Use class `.label-error` in css style in project
+
+
+
