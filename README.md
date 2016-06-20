@@ -104,7 +104,7 @@ Our stack usually consists of the following tools:
 ### Model Example
 
    .. code:: Django
-   
+
      from django.db import models
 
      class Product(models.Model):
@@ -138,6 +138,7 @@ Our stack usually consists of the following tools:
 
 
 ### Template Form Example
+----------------
 
    .. code:: Django
 
