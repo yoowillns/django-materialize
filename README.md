@@ -151,7 +151,7 @@ class ProductForm(forms.ModelForm):
             <form class="col s12" action="" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
 
-                {% materialize_form form %}
+                {% materialize_form form form_title='Producto' data_success='Correcto' %}
                 
                 <button class="btn waves-effect waves-light" type="submit" name="action">Register
                 </button>
