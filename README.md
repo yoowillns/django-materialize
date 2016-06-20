@@ -26,7 +26,7 @@ Requirements
   - [2.2: Model Form Example](#model-form-example)
   - [2.3: Template Form Example](#template-form-example)
 - [Part 3: Extra](#extra)
-  - [3.1.1: Customize label erros](#customize-label-errors)
+  - [3.1: Customize Label Erros](#customize-label-errors)
 
 ---
 
@@ -42,13 +42,13 @@ Our stack usually consists of the following tools:
 
    ``setup.py install``
 
-2. Add "materialize" to your INSTALLED_APPS setting ::
-	
+2. Add "materialize" to your INSTALLED_APPS setting :
+    ```python
     INSTALLED_APPS = [
         ...
         'materialize',
     ]
-
+    ```
 3. In your templates, load the ``materialize`` library and use the ``{% load materialize %}`` 
 
 ### Project Structure
@@ -78,88 +78,91 @@ Our stack usually consists of the following tools:
 
 ### Template Content
 
-   .. code:: Django
+```python
 
-    {% load materialize %}
+{% load materialize %}
 
-  	{% block content %}
-  	    <div class="row">
-  	        <div class="col s6">
-  	            <form class="col s12" action="" method="post">
-  	                {% csrf_token %}
+{% block content %}
+    <div class="row">
+        <div class="col s6">
+            <form class="col s12" action="" method="post">
+                {% csrf_token %}
 
-  	                {% materialize_form form %}
+                {% materialize_form form %}
 
-  	                <button class="btn waves-effect waves-light" type="submit" name="action">Register
-  	                </button>
-  	            </form>
-  	        </div>
-  	    </div>
-  	{% endblock %}
+                <button class="btn waves-effect waves-light" type="submit" name="action">Register
+                </button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+```
 
 ## Examples
 
 ### Model Example
 
-   .. code:: Django
-    from django.db import models
+```python
+from django.db import models
 
-    class Product(models.Model):
-      name = models.CharField(max_length=10, verbose_name='Nombre', null=False)
-      category = models.ManyToManyField(Category, verbose_name='Categoria')
-      count = models.IntegerField(verbose_name='Cantidad')
-      date_buy = models.DateField(verbose_name='Fecha de Compra')
-      image = models.FileField(upload_to='uploads', verbose_name='Imagen')
-      description = models.TextField(verbose_name='Descripcion')
-      state = models.BooleanField(verbose_name='Estado', default=False)
-      date = models.DateTimeField(auto_now_add=True)
+class Product(models.Model):
+  name = models.CharField(max_length=10, verbose_name='Nombre', null=False)
+  category = models.ManyToManyField(Category, verbose_name='Categoria')
+  count = models.IntegerField(verbose_name='Cantidad')
+  date_buy = models.DateField(verbose_name='Fecha de Compra')
+  image = models.FileField(upload_to='uploads', verbose_name='Imagen')
+  description = models.TextField(verbose_name='Descripcion')
+  state = models.BooleanField(verbose_name='Estado', default=False)
+  date = models.DateTimeField(auto_now_add=True)
 
-      def __str__(self):
-          return self.name
+  def __str__(self):
+      return self.name
 
-      class Meta:
-          verbose_name = 'Producto'
-          verbose_name_plural = 'Productos'
+  class Meta:
+      verbose_name = 'Producto'
+      verbose_name_plural = 'Productos'
+```       
 
 ### Model Form Example
 
-   .. code:: Django
-    from django import forms
-    from django.forms import ModelForm
-    from models import *
-   
-    class ProductForm(forms.ModelForm):
-      favorite_colors = forms.ChoiceField(required=True,
-          widget=forms.RadioSelect, choices=FAVORITE_COLORS_CHOICES, help_text='Select')
-      class Meta:
-          model = Product
-          fields = '__all__'
+```python
+from django import forms
+from django.forms import ModelForm
+from models import *
 
+class ProductForm(forms.ModelForm):
+  favorite_colors = forms.ChoiceField(required=True,
+      widget=forms.RadioSelect, choices=FAVORITE_COLORS_CHOICES, help_text='Select')
+  class Meta:
+      model = Product
+      fields = '__all__'
+```
 
 ### Template Form Example
 
-   .. code:: Django
+```python
 
-    {% load materialize %}
+{% load materialize %}
 
-  	{% block content %}
-  	    <div class="row">
-  	        <div class="col s6">
-  	            <form class="col s12" action="" method="post" enctype="multipart/form-data">
-  	                {% csrf_token %}
+{% block content %}
+    <div class="row">
+        <div class="col s6">
+            <form class="col s12" action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
 
-  	                {% materialize_form form %}
-  	                
-  	                <button class="btn waves-effect waves-light" type="submit" name="action">Register
-  	                </button>
-  	            </form>
-  	        </div>
-  	    </div>
-  	{% endblock %}
+                {% materialize_form form %}
+                
+                <button class="btn waves-effect waves-light" type="submit" name="action">Register
+                </button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+```
 
 ## Extra
-### Customize label erros
-Use class `.label-error` in css style in project
+### Customize Label Erros
+  Use class `.label-error` in css style in project
 
 
 
