@@ -139,22 +139,23 @@ Our stack usually consists of the following tools:
 
 ### Template Form Example
   .. code:: Django
-  {% load materialize %}
-  
-  {% block content %}
-      <div class="row">
-          <div class="col s6">
-              <form class="col s12" action="" method="post" enctype="multipart/form-data">
-                  {% csrf_token %}
 
-                  {% materialize_form form %}
-                  
-                  <button class="btn waves-effect waves-light" type="submit" name="action">Register
-                  </button>
-              </form>
-          </div>
-      </div>
-  {% endblock %}
+    {% load materialize %}
+
+    {% block content %}
+        <div class="row">
+            <div class="col s6">
+                <form class="col s12" action="" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    {% materialize_form form %}
+                    
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Register
+                    </button>
+                </form>
+            </div>
+        </div>
+    {% endblock %}
 
 ## Extra
 ### Customize label erros
