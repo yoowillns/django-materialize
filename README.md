@@ -131,8 +131,6 @@ from django.forms import ModelForm
 from models import *
 
 class ProductForm(forms.ModelForm):
-  favorite_colors = forms.ChoiceField(required=True,
-      widget=forms.RadioSelect, choices=FAVORITE_COLORS_CHOICES, help_text='Select')
   class Meta:
       model = Product
       fields = '__all__'
