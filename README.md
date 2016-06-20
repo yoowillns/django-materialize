@@ -37,13 +37,13 @@ Download ZIP or clone this repository (https://github.com/yoowillns/django-mater
 ### Install
 
 Our stack usually consists of the following tools:
-
+-----------
 1. Install:
 
    ``setup.py install``
 
 2. Add "materialize" to your INSTALLED_APPS setting like this::
-	
+  
     INSTALLED_APPS = [
         ...
         'materialize',
@@ -53,9 +53,9 @@ Our stack usually consists of the following tools:
 
 ### Project Structure
 
-**Note:**
+**Note Create templates in folder project**
 
-> - Create ``/templates/layout/MainLayout.html`` in project
+> `/templates/layout/MainLayout.html`
 
 ### Template Main Layout
 
@@ -80,8 +80,6 @@ Our stack usually consists of the following tools:
 
 ### Template Content
 
-   .. code:: Django
-
     {% load materialize %}
 
   	{% block content %}
@@ -103,7 +101,6 @@ Our stack usually consists of the following tools:
 
 ### Model Example
 
-   .. code:: Django
 
      from django.db import models
 
@@ -124,7 +121,6 @@ Our stack usually consists of the following tools:
 
 ### Model Form Example
 
-   .. code:: Django
      from django import forms
      from django.forms import ModelForm
      from models import *
