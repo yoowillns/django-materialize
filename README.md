@@ -25,6 +25,7 @@ Requirements
   - [2.1: Model Example](#model-example)
   - [2.2: Model Form Example](#model-form-example)
   - [2.3: Template Form Example](#template-form-example)
+  - [2.4: Result Form](#result-form)
 - [Part 3: Extra](#extra)
   - [3.1: Customize Label Erros](#customize-label-erros)
 
@@ -35,8 +36,6 @@ Requirements
 Download ZIP or clone this repository (https://github.com/yoowillns/django-materialize) 
 
 ### Install
-
-Our stack usually consists of the following tools:
 
 1. Install:
 
@@ -57,7 +56,7 @@ Our stack usually consists of the following tools:
 
 ### Template Main Layout
 
-```html
+```python
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -161,6 +160,10 @@ class ProductForm(forms.ModelForm):
     </div>
 {% endblock %}
 ```
+
+### Result Form
+
+![alt text](screenshots/demo-1.png "Demo Form")
 
 ## Extra
 ### Customize Label Erros
